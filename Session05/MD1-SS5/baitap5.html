@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    /* input[type="text"],
+    input[type="email"],
+    input[type="subject"],
+    textarea {
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 12px;
+    } */
+    .container{
+        background-color: rgb(234, 227, 227);
+        width: 540px;
+        height: 300px;
+    }
+    form {
+        margin: 20px;
+        max-width: 500px;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .line-one{
+        display: flex;
+        justify-content:center;
+        gap: 150px; 
+        padding: 10px;
+    }
+
+    .line-two{
+        display: flex;
+        justify-content:center;
+        gap: 150px;
+
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    .line-three{
+        margin-bottom: 20px;
+    }
+
+    .line-three__country{
+        width: 175px;
+
+    }
+    .line-three__course{
+        width: 175px;
+        margin-left: 145px;
+    }
+    textarea {
+        padding: 10px;
+        margin-bottom: 20px;
+        border: none 1x;
+        border-radius: 4px;
+        width: 500px;
+    }
+
+    input[type="submit"] {
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 2px;
+        /* tạo góc cong */
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        /* hiển thị bàn tay khi rê chuột vào nút */
+        text-align: center;
+        width: 500px;
+        height: 40px;
+    }
+</style>
+<body>
+    <div class="container">
+        <form>
+            <div class="line-one">
+                <input class="line-one__1st-name" placeholder="First Name" type="first-name"> 
+                <input class="line-one__last-name" placeholder="Last Name" type="last-name"> 
+            </div>
+            
+            <div class="line-two">
+                <input class="line-two__mail" placeholder="Your Email" type="mail">
+                <input class="line-two__phone" placeholder="Your Phone" type="phone">
+            </div>
+
+            <div class="line-three">
+                <select class="line-three__country" name="" id="" type="country">
+                    <option value="">Select Country</option>
+                </select>
+                <select class="line-three__course" name="" id="" type="course">
+                    <option value="">Select Course</option>
+                </select>
+            </div>
+
+            <textarea placeholder="Content" rows="4"></textarea>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

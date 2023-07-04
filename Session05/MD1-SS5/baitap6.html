@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    h2{
+        margin: 20px;
+    }
+    form {
+        margin: 20px;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+    }
+    input[type="name"],
+    input[type="mail"],
+    input[type="subject"],
+    textarea {
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 12px;
+    }
+    .line-one{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    .line-one__name{
+        width: 250px;
+    }
+    .line-one__mail{
+        width: 250px;
+    }
+    span{
+        margin-left: 80px;
+
+    }
+
+    input[type="submit"] {
+        background-color: #0BB8B8;
+        color: #fff;
+        border: none;
+        border-radius: 2px;
+        /* tạo góc cong */
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        /* hiển thị bàn tay khi rê chuột vào nút */
+        text-align: left;
+        width: 150px;
+        height: 40px;
+    }
+</style>
+<body>
+    <h2>Get in touch with us by filling contact form below</h2>
+    <div class="container">
+        <form action="">
+            <div class="line-one">
+                <input class="line-one__name" placeholder="Enter your full name" type="name"> 
+                <input class="line-one__mail" placeholder="Enter your email address" type="mail"> 
+            </div>
+            <input placeholder="Enter your subject" type="subject" >
+            <textarea placeholder="Your message here..." rows="15"></textarea>
+            <div class="line-last">
+                <input type="submit" value="Send Message">
+                <span>Please fill all required form field, thanks</span>
+            </div>
+        </form> 
+    </div>
+</body>
+</html>
