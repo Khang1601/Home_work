@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--  -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+
+<style>
+    * {
+        box-sizing: border-box; 
+        padding: 0;
+        margin: 0;
+        font-family: monospace;
+    }
+
+    span {
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+
+    .spanz {
+        display: inline-block;
+        width: 150px;
+    }
+
+    hr {
+        border: 1px solid yellow;
+        width: 60px;
+        margin-top: 1px;
+        text-align: left;
+        margin-left: 0;
+    }
+
+    form {
+        margin: 20px;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="subject"],
+    textarea {
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 12px;
+    }
+
+    input[type="submit"] {
+        background-color: #0BB8B8;
+        color: #fff;
+        border: none;
+        border-radius: 2px;
+        /* tạo góc cong */
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        /* hiển thị bàn tay khi rê chuột vào nút */
+        text-align: left;
+        width: 150px;
+        height: 40px;
+    }
+
+    .main {
+        width: 1000px;
+        height: 500px;
+        border: 1px solid black;
+        padding: 30px;
+
+        display: flex;
+        /* flex-direction: row; */
+        justify-content:space-around;
+    }
+
+    .benphai{
+        margin-top: 30px;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="bentrai">
+            <h1>
+                CONTACT US
+            </h1>
+            <hr class="line"><br>
+            <h2>
+                Contact info
+            </h2><br>
+            <span class="material-symbols-outlined">
+                pin_drop
+            </span>
+            <span class="spanz">321 Awesome Street New York, NY 17022</span><br>
+
+            <span class="material-symbols-outlined">
+                mail
+            </span>
+            <span>info@companyname.com</span><br>
+            <span class="material-symbols-outlined">
+                call
+            </span>
+            <span>+1 800 123 1234</span><br>
+
+        </div>
+
+        <div class="benphai">
+            <form>
+                <!-- 
+                id="name" name="name" title="abc" required
+                id="email" name="email" required
+                id="subject" name="subject" required
+                id="message" name="message" rows="4" required
+             -->
+                <h2>Having Any Query! Or Book an appointment</h2>
+                <input style="width: 500px;" placeholder="Your Name" type="text" required>
+                <input style="width: 500px;" placeholder="Your Email" type="email">
+                <input style="width: 500px;" placeholder="Subject" type="subject">
+                <textarea style="width: 500px;" placeholder="Message" rows="4"></textarea>
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

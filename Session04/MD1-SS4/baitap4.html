@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4: Tạo một trang web sinh động về tuyển dụng</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box; 
+        padding: 0;
+        margin: 0;
+        font-family: monospace;
+    }
+    div{
+        border: 1px;
+        border-radius: 5px;
+        background-color: whitesmoke;
+        width: 340px;
+        height: 370px;
+
+        padding: 15px;
+    }
+    h1{
+        font-weight: bold;
+        margin-left: 80px;
+    }
+    .submit{
+        color: white;
+        background-color: black;
+        border-radius: 5px;
+        width: 60px;
+        height: 40px;
+    }
+</style>
+<body>
+    
+    <h1>Tuyển dụng</h1>
+    <div>
+    <form action="https://learn.rikkeiacademy.com/learn/41">
+        <label for="name">Họ và tên:</label><br>
+        <input style="width: 300px;" type="text" id="name"><br><br>
+        <label for="mail">Email:</label><br>
+        <input style="width: 300px;" type="text" id="mail"><br><br>
+        <label for="sdt">Số điện thoại:</label><br>
+        <input style="width: 300px;" type="text" id="sdt"><br><br>
+        <label for="CV">CV:</label><br>
+        <input style="width: 300px;" type="file"><br><br>
+        <label for="tinnhan">Tin nhắn:</label><br>
+        <textarea style="width: 300px;" rows="3"></textarea><br><br>
+        <input class="submit" type="submit" value="Gửi">
+    </form>
+    </div>
+</body>
+</html>

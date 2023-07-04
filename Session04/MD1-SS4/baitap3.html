@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3: Tạo trang web giới thiệu cửa hàng</title>
+</head>
+ 
+<!-- 
+    normal: Đây là giá trị mặc định của thẻ font-weight. Đoạn text sẽ được hiển thị với độ dày mặc định của trình duyệt web.
+    bold: Giá trị này sẽ hiển thị đoạn text đậm hơn so với bình thường.
+    bolder: Đây là giá trị hiển thị đoạn text đậm hơn so với giá trị bold.
+    lighter: Giá trị lighter của thẻ in đậm sẽ hiển thị đoạn text mỏng hơn so với normal.
+    100,200,…,900: Bạn có thể nhập các giá trị này vào để tùy chỉnh độ dày của đoạn text.
+    inherit: Giá trị này sẽ kế thừa độ đậm của thành phần mẹ bao quanh đoạn text.
+
+    /* for the img inside your div */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: block;
+    margin: 0 auto;
+ -->
+
+ 
+<style>
+    div{
+        border: 2px outset black;
+        background-color: rgb(231, 235, 236);    
+    }
+    h1{
+        text-align: center;
+    }
+    img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .disc{
+        padding: 20px;
+        border: none;
+    }
+    .a{
+        color: red;
+        font-weight: bold; 
+    }
+
+</style>
+
+<body>
+    <div>
+        <h1>Nhà hàng ABC</h1>
+        <img src="../../../Part-time/images/nhahang.jpg" alt=""><br>
+        <div class="disc">
+            <label class="a">Chào mừng đến với nhà hàng ABC.</label>
+            <label class="b">Chúng tôi chuyên phục vụ các món ăn ngon và chất lượng, đặc biệt là các món ăn đặc sản. Với không gian sang trọng và đội ngũ nhân viên chuyên nghiệp, chúng tôi tin rằng sẽ mang đến cho quý khác trải nghiệm tuyệt vời nhất.</label>
+        </div>
+    </div>
+</body>
+</html>
