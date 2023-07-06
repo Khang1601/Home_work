@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3: Làm một trang web bán hàng trực tuyến có nội dung như sau</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    h1{
+        text-align: center;
+    }
+    .container{
+        background-color: whitesmoke;
+        width: 500px;
+        padding: 10px;
+        margin: auto;
+    }
+    .row{
+        /* background-color: blanchedalmond; */
+        /* border: 5px solid black; */
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        padding: 20px;
+    }
+    .row-sach{
+        /* background-color: rgb(188, 138, 235); */
+        border: 2px solid black;
+        width: 200px;
+        padding: 10px;
+        margin: 5px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .disc{
+        border: 2px solid black;
+        width: 200px;
+        padding: 10px;
+        margin: 5px;
+        text-align: center;
+    }
+
+    button{
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        /* width: 70px;
+        height: 30px; */
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+    button:hover{
+        opacity: 0.5;
+    }
+</style>
+
+<body>
+    <h1>Sách trực tuyến</h1>
+    <div class="container">
+        <div class="row">
+            <div class="row-sach">
+                <img src="" alt="Sách 1">
+                <h2>Sách 1</h2>
+                <p>Giá: $10</p>
+                <button>Mua</button>
+            </div>
+            <div class="row-sach">
+                <img src="" alt="Sách 2">
+                <h2>Sách 2</h2>
+                <p>Giá: $15</p>
+                <button>Mua</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="row-sach">
+                <img src="" alt="Sách 3">
+                <h2>Sách 3</h2>
+                <p>Giá: $20</p>
+                <button>Mua</button>
+            </div>
+            <div class="row-sach">
+                <img src="" alt="Sách 4">
+                <h2>Sách 4</h2>
+                <p>Giá: $25</p>
+                <button>Mua</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="row-sach">
+                <img src="" alt="Sách 5">
+                <h2>Sách 5</h2>
+                <p>Giá: $30</p>
+                <button>Mua</button>
+            </div>
+            <div class="row-sach">
+                <img src="" alt="Sách 6">
+                <h2>Sách 6</h2>
+                <p>Giá: $35</p>
+                <button>Mua</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

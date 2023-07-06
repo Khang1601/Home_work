@@ -13,77 +13,118 @@
         padding: 0;
         margin: 0;
         font-family: monospace;
+        background-color:gainsboro
     }
     hr {
         border: 1px dotted yellow;
-        width: 600px;
+        width: 700px;
         margin-top: 1px;
         text-align: left;
         margin-left: 0;
     }
-    .div_container{
+    main{
+        /* background-color: aqua; */
         display: flex;
-        gap: 10px;
+        justify-content: center;
+        gap: 50px;
     }
-    /* .flex-children{
+    header{
+        margin: 20px;
+        margin-left: 205px;
+        margin-bottom: 50px;
+    }
+
+    .img-blue{
+        width: 550px;
+        height: 300px;
+    }
+    .left__article{
+        /* background-color: blueviolet; */
         display: flex;
-        flex-direction: row;
-        
-    } */
-    .spanz {
-        /* display: inline-block; */
-        width: 150px;
+        flex-direction: column;
+        width: 550px;
+    }
+    .parent{
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        gap: 20px;
+    }
+    .children{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .img-pink{
+        width: 90px;
+        height: 90px;
+    }
+    h3{
+        margin-bottom: 10px;
     }
 </style>
 
 <body>
-    <h1>Issues & Plans</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, sint.</p>
-    <p>Lorem ipsum dolor sit amet.</p>
-    <div class="div_container">
-        <div class="div_flexitem_left">
-            <p><img src="../../../Part-time/images/blue.jpg" alt=""></p><br>
-            <p>"Turkey Will Continue To Make Structural Economic Reforms"</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
+    <header>
+        <h1>Issues & Plans</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur, perspiciatis? Facilis inventore aliquid impedit, adipisci nobis odit veniam dolores magnam?</p>        
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, perspiciatis.</p>
+    </header>
+
+    <main>
+        <section class="left">
+            <article class="left__article">
+                <p><img class="img-blue" src="../../../Part-time/images/blue.jpg" alt=""></p><br>
+                <h2>"Turkey Will Continue To Make Structural Economic Reforms"</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus suscipit vitae ducimus iure nihil excepturi repellat cumque nam iusto id? Explicabo eaque voluptas dolores consequatur harum reprehenderit vitae doloremque labore!</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime sapiente magni esse porro pariatur fugit incidunt minima debitis dolores quas.</p>
+            </article>
+            
+        </section>
 
 
-        <div class="div_flexitem_right">
-            <div class="flex-children">
-                <span><img src="../../../Part-time/images/H.PNG" alt=""></span>
-                <span><b>CLIMATE CHANGE</b></span>
-                <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, aperiam.</span>
-                <span>Lorem ipsum dolor sit amet.</span>
-            </div>
+        <section class="right">
+            <article class="parent">
+                <img class="img-pink" src="../../../Part-time/images/H.PNG" alt="">
+                <div class="children">
+                    <h3><b>CLIMATE CHANGE</b></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, aperiam.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+
+            </article><br>
             <hr class="line"><br>
 
-            <div class="flex-children">
-                <img src="../../../Part-time/images/H.PNG" alt="">
-                <p><b>COMPREHENSIVE IMMIGRATION REFORM</b></p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, aperiam.</p>
-                <P>Lorem ipsum dolor sit amet.</P>
-            </div>
+            <article class="parent">
+                <img class="img-pink" src="../../../Part-time/images/H.PNG" alt="">
+                <div class="children">
+                    <h3><b>COMPREHENSIVE IMMIGRATION REFORM</b></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, aperiam.</p>
+                    <P>Lorem ipsum dolor sit amet.</P>
+                </div>
+            </article><br>
             <hr class="line"><br>
 
-            <div class="flex-children">
-                <img src="../../../Part-time/images/H.PNG" alt="">
-                <p><b>ECONOMIC OPPORTUNITY</b></p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, aperiam.</p>
-                <P>Lorem ipsum dolor sit amet.</P>
-            </div>
+            <article class="parent">
+                <img class="img-pink" src="../../../Part-time/images/H.PNG" alt="">
+                <div class="children">
+                    <h3><b>ECONOMIC OPPORTUNITY</b></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, aperiam.</p>
+                    <P>Lorem ipsum dolor sit amet.</P>
+                </div>
+            </article><br>
             <hr class="line"><br>
 
-            <div class="flex-children">
-                <img src="../../../Part-time/images/H.PNG" alt="">
-                <p><b>HEALTH CARE</b></p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, aperiam.</p>
-                <P>Lorem ipsum dolor sit amet.</P>
-            </div>
-            <hr class="line"><br>
-
-        </div>
-    </div>
+            <article class="parent">
+                <img class="img-pink" src="../../../Part-time/images/H.PNG" alt="">
+                <div class="children">
+                    <h3><b>HEALTH CARE</b></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, aperiam.</p>
+                    <P>Lorem ipsum dolor sit amet.</P>
+                </div>
+            </article>
+        </section>
+    </main>
 </body>
 
 </html>

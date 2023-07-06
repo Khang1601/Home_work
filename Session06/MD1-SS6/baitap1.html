@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1: Hãy làm một trang web quản lý công việc với nội dung như ở dưới ảnh. Sử dụng các thẻ HTML5 và thuộc tính layout Flex</title>
+</head>
+
+<style>
+    *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        /* display: flex;
+        justify-content: row; */
+        width: 500px;
+        
+    }
+    header{
+        background-color: #0879FB;
+        color: white;
+        width: 500px;
+        padding: 10px;
+
+        display: flex;
+        justify-content: left;
+        align-items: center;
+
+        position: relative;
+    }
+    .btn-share{
+        background-color: #FFFFFF;
+        color: black;
+        font-weight: bold;
+        border: 1x solid outset;
+        border-radius: 5px;
+        padding: 10px;
+        width: 80px;
+        height: 40px;
+        top: 8px;
+        right: 8px;
+        bottom: 8px;
+        cursor: pointer;
+
+        position: absolute;
+    }
+
+    .article-one{
+        margin: 10px;
+        /* background-color: chocolate; */
+    }
+    input{
+        border: 1px solid black;
+        width: 338px;
+        height: 25px;
+        padding: 5px;
+    }
+    .btn-add{
+        background-color:#0879FB;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 5px; 
+        height: 25px;
+    }
+
+    .article-two{
+        background-color: whitesmoke;
+        margin: 10px;
+    }
+    footer{
+        background-color: gray;
+        height: 30px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+<body>
+    <header>
+        <h1>Task List</h1>
+        <button class="btn-share">Share</button>
+    </header>
+
+    <section>
+        <article class="article-one">
+            <label for="new-task">New Task:</label>
+            <input type="text">
+            <button class="btn-add">Add Task</button>
+        </article>
+
+        <article class="article-two">
+            <h2>Shared Task List</h2>
+        </article>
+    </section>
+
+    <footer>
+        <p>&copy 2023 Task List App</p>
+    </footer>
+</body>
+</html>

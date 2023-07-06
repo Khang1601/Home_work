@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4: Sử dụng layout grid để làm ra trang web có nội dung như sau</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: aqua;
+        display: grid;
+        grid-template-areas: 
+        "welike welike"
+        "special angry"
+        "special balloon"
+        "special signup"
+        "tenthings signup";
+        gap: 10px;
+        width: 700px;
+        height: 800px;
+        color: white;
+
+        justify-content: center;
+        
+        
+    }
+    .welike{
+        /* background-color: blueviolet; */
+        background-image: url(balloon_festival.jpg);
+        grid-area: welike;
+
+        padding: 10px;
+        
+    }
+    .special{
+        /* background-color: chocolate; */
+        background-image: url(balloon_special.jpg);
+        grid-area: special;
+
+        padding: 10px;
+
+        display: flex;
+        justify-content: end;
+        flex-direction: column;
+
+    }
+    .tenthings{
+        /* background-color: cornflowerblue; */
+        background-image: url(balloon_10things.jpg);
+        grid-area: tenthings;
+
+        padding: 10px;
+
+        display: flex;
+        justify-content: end;
+        flex-direction: column;
+    }
+    .angry{
+        /* background-color: darkgreen; */
+        background-image: url(balloon_angry.jpg);
+        grid-area: angry;
+        padding: 10px;
+    }
+    .balloon{
+        /* background-color: greenyellow; */
+        background-image: url(balloon.jpg);
+        grid-area: balloon;
+
+        padding: 10px;
+    }
+    .signup{
+        background-color: #7D0C20;
+        grid-area: signup;
+
+        padding: 10px;
+
+        display: flex;
+        justify-content: space-between;
+        /* align-items: center; */
+        flex-direction: column;
+        
+    }
+    button{
+        font-size: 18px;
+        width: 280px;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        margin-left: 20px;
+        cursor: pointer;
+
+    }
+    button:hover{
+        opacity: 0.5;
+    }
+</style>
+<body>
+    <div class="welike">
+        <h2>We like balloons</h2>
+        <p>You can find all kinds of balloon related thing here.</p>
+    </div>
+
+    <div class="special">
+        <h2>Speacial Shapes</h2>
+        <p>Why are some of them so scary looking</p>
+    </div>
+
+    <div class="tenthings">
+        <h2>10 things you discover when taking a balloon ride</h2>
+        <p>Number 8 will AMAZE you</p>
+    </div>
+
+    <div class="angry">
+        <h2>Angry people at balloon fiestas</h2>
+        <p>Hot air balloons. A bit weather sensitive</p>
+    </div>
+
+    <div class="balloon">
+        <h2>Balloon photos</h2>
+        <p>I have quite a few.</p>
+    </div>
+
+    <div class="signup">
+        <p>Sign up for more information about balloons</p>
+        <button>Sign me up!</button>
+    </div>
+</body>
+</html>
