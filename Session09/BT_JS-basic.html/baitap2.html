@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2: Hiển thị form cho người dùng nhập với nội dung form: “mời bạn nhập số tuổi của mình”.</title>
+</head>
+
+<body>
+    <h1>Bài 2: Hiển thị form cho người dùng nhập với nội dung form: “mời bạn nhập số tuổi của mình”. </h1>
+
+    <!-- <form id="ageForm">
+        <label for="ageInput">Mời bạn nhập số tuổi của mình:</label>
+        <input type="number" id="ageInput" required>
+        <button type="submit">Submit</button>
+    </form> -->
+
+    <script>
+        //Sử dụng JavaScript cơ bản, chúng ta lắng nghe sự kiện "submit" của form. Khi người dùng nhấn nút Submit, chúng ta ngăn chặn hành vi mặc định của form (tránh gửi yêu cầu lại trang) bằng cách sử dụng event.preventDefault().
+        //Sau đó, chúng ta lấy giá trị đã nhập từ ô nhập tuổi (sử dụng document.getElementById("ageInput").value) và hiển thị một thông báo sử dụng hàm alert(). Trong ví dụ này, thông báo sẽ chứa tuổi của người dùng.
+        // var form = document.getElementById("ageForm");
+
+        // form.addEventListener("submit", function (event) {
+        //     event.preventDefault();
+        //     var age = document.getElementById("ageInput").value;
+        //     console.log("Tuổi của bạn là: " + age);
+        // });
+
+
+        var tuoi = prompt("Mời bạn nhập số tuổi của mình:");
+        
+    </script>
+
+</body>
+
+</html>

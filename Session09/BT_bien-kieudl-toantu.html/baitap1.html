@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1: Viết chương trình nhập điểm của một sinh viên cho các môn: Vật lý, Hóa học, và Sinh học. Sau đó hiển
+        thị điểm trung bình và tổng của những điểm này.</title>
+</head>
+
+<body>
+    <h1>Bài 1: Viết chương trình nhập điểm của một sinh viên cho các môn: Vật lý, Hóa học, và Sinh học. Sau đó hiển thị
+        điểm trung bình và tổng của những điểm này.</h1>
+
+    <script>
+        // Ko để gì thì typeof là: string
+        // Để + or parsefloat thì typeof là: number
+        var diemVatLy = +prompt("Nhập điểm Vật lý:");
+        var diemHoaHoc = +prompt("Nhập điểm Hóa học:");
+        var diemSinhHoc = +prompt("Nhập điểm Sinh học:");
+
+        // Tính tổng điểm
+        var tongDiem = diemVatLy + diemHoaHoc + diemSinhHoc;
+
+        // Tính điểm trung bình
+        var diemTrungBinh = tongDiem / 3;
+
+        // Hiển thị kết quả
+        console.log("Điểm trung bình: " + diemTrungBinh.toFixed(2));
+        console.log("Tổng điểm: " + tongDiem.toFixed(2));
+
+    </script>
+</body>
+
+</html>

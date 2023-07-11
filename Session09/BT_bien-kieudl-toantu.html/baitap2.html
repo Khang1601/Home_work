@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viết chương trình nhập một giá trị là độ 0C (Celsius) và chuyển nó sang độ 0F (Fahrenheit). [Hướng dẫn: C/5 =
+        (F-32)/9].</title>
+</head>
+
+<body>
+    <h1>Viết chương trình nhập một giá trị là độ 0C (Celsius) và chuyển nó sang độ 0F (Fahrenheit). [Hướng dẫn: C/5 =
+        (F-32)/9].</h1>
+
+
+    <script>
+        // Sử dụng parseFloat để chuyển đổi giá trị nhập vào thành số thực (float)
+        // Nhập giá trị độ Celsius
+        var doCelsius = parseFloat(prompt("Nhập giá trị độ Celsius:"));
+
+        // Chuyển đổi sang độ Fahrenheit
+        var doFahrenheit = (doCelsius * 9 / 5) + 32;
+
+        // console.log("Giá trị độ Fahrenheit: " + doFahrenheit.toFixed(2));
+        console.log(`Kết quả: ${doCelsius}độ C =>> ${doFahrenheit}độ F`)
+
+    </script>
+
+</body>
+
+</html>

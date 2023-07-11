@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>[Bài tập] Máy tính đơn giản</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        .calculator {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        #result {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Máy tính đơn giản</h1>
+        <div class="calculator">
+            <button onclick="appendToExpression('7')">7</button>
+            <button onclick="appendToExpression('8')">8</button>
+            <button onclick="appendToExpression('9')">9</button>
+            <button onclick="appendToExpression('4')">4</button>
+            <button onclick="appendToExpression('5')">5</button>
+            <button onclick="appendToExpression('6')">6</button>
+            <button onclick="appendToExpression('1')">1</button>
+            <button onclick="appendToExpression('2')">2</button>
+            <button onclick="appendToExpression('3')">3</button>
+            <button onclick="appendToExpression('0')">0</button>
+            <button onclick="appendToExpression('+')">+</button>
+            <button onclick="appendToExpression('-')">-</button>
+            <button onclick="appendToExpression('*')">*</button>
+            <button onclick="appendToExpression('/')">/</button>
+        </div>
+        <button onclick="calculate()">=</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function appendToExpression(value) {
+            var result = document.getElementById("result");
+            result.textContent += value;
+        }
+
+        function calculate() {
+            var result = document.getElementById("result");
+            var expression = result.textContent;
+
+            var calculatedResult = eval(expression);
+            result.textContent = calculatedResult;
+        }
+
+    </script>
+</body>
+</html>
