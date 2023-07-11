@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        margin-left: 300px;
+    }
+    /***************Header**************************************************/
+    header {
+        /* background-color: brown; */
+        width: 1000px;
+        height: 50px;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 700px;
+    }
+    .header-info__usd{
+
+    }
+    /***************NAV************************************************* --> */
+    nav {
+        /* background-color: blueviolet; */
+        width: 1000px;
+        height: 50px;
+
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+
+    nav a {
+        text-decoration: none;
+    }
+
+    /***************Section************************************************* --> */
+    section {
+        /* background-color: bisque; */
+        width: 1000px;
+        display: flex;
+        justify-content: space-between;
+    }
+    /***************Artical Left************************************************* --> */
+    .article-left__title{
+        font-size: 28px;
+    }
+    .your-tour__date {
+        background-color: #F4F4F6;
+        width: 220px;
+        display: flex;
+        gap: 65px;
+        margin-bottom: 20px;
+    }
+    .your-tour__travel {
+        background-color: #F4F4F6;
+        width: 220px;
+        display: flex;
+        gap: 100px;
+        margin-bottom: 20px;
+    }
+    .btn-date,
+    .btn-travel{
+        width: 40px;
+    }
+    .creadit-card__method{
+        width: 380px;
+    }
+    .creadit-card__master,
+    .creadit-card__visa{
+        width: 300px;
+    }
+
+    .input-number {
+        border: 1x solid rgb(203, 198, 198);
+        border-radius: 10px;
+        width: 400px;
+        height: 35px;
+    }
+    .user-infor {
+        /* background-color: cadetblue; */
+        width: 400px;
+        display: flex;
+        justify-content: space-between;
+        /* gap: 50px; */
+    }
+    .input-date {
+        border: 1x solid rgb(203, 198, 198);
+        border-radius: 10px;
+        width: 185px;
+        height: 35px;
+    }
+
+    .input-cvc {
+        border: 1x solid rgb(203, 198, 198);
+        border-radius: 10px;
+        width: 185px;
+        height: 35px;
+    }
+
+    .creadit-card__btn-confirm {
+        background-color: #3B71FE;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        height: 40px;
+        width: 180px;
+    }
+
+    /***************Artical Right************************************************* --> */
+    .article-right{
+        background-color: #FAFAFB;
+        padding: 10px;
+        line-height: 30px;
+
+    }
+    .article-right__star{
+        color: yellow;
+
+    }
+    .in-out {
+        /* background-color: #3B71FE; */
+        width: 325px;
+        display: flex;
+        gap: 80px;
+    }
+
+    .article-right__imghotel {
+        border-radius: 10px;
+        width: 285px;
+    }
+    .article-right__review,
+    .checkin__title,
+    .checkout__title,
+    .guest__title,
+    .article-right__bedroom{
+        opacity: 0.5;
+    }
+    .article-right__total {
+        background-color: #e2e2e9;
+        width: 265px;
+        font-weight: bold;
+    }
+    .article-right__report{
+        margin-left: 70px;
+        opacity: 0.5;
+    }
+
+    /* <!--**************Article Bot************************************************* --> */
+    .subscribe {
+        background-image: url(bg.png);
+        background-repeat: no-repeat;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        height: 200px;
+        width: 1000px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+    }
+
+    ::placeholder {
+        left: 10px;
+    }
+
+    .subscribe__two {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+    }
+
+    .input-email {
+        width: 400px;
+        height: 50px;
+        border-radius: 2px;
+        border: none;
+        padding: 15px;
+    }
+
+    .btn-subscribe {
+        background-color: #353945;
+        color: white;
+        border: none;
+        border-radius: 2px;
+        width: 100px;
+        height: 40px;
+
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        bottom: 1px;
+    }
+
+        /* <!--**************Footer************************************************* --> */
+        footer {
+        /* background-color: aqua; */
+        width: 1000px;
+        height: 250px;
+        padding: 30px;
+        line-height: 20px;
+
+        display: flex;
+        justify-content: space-around;
+        gap: 100px;
+    }
+
+    .footer-services,
+    .footer-support,
+    .footer-business{
+        line-height: 24px;
+    }
+</style>
+
+<body>
+    <!--**************Header************************************************* -->
+    <header>
+        <div class="header-icon">
+            <img src="logo.png" alt="">
+        </div>
+        <div class="header-info">
+            <span class="header-info__usd">USD</span>
+            <span class="material-symbols-outlined">
+                south_america
+            </span>
+            <span class="material-symbols-outlined">
+                notifications
+            </span>
+            <span class="material-symbols-outlined">
+                account_circle
+            </span>
+            <button class="header-info__btn">
+                <span class="material-symbols-outlined">
+                    expand_more
+                </span>
+            </button>
+        </div>
+    </header>
+
+    <!--**************NAV************************************************* -->
+    <nav>
+        <a href="">Home</a><span>&nbsp;></span>
+        <a href="">&nbsp;Hotel list</a><span>&nbsp;></span>
+        <a href="">&nbsp;Hotel details</a><span>&nbsp;></span>
+        <a href="">&nbsp;Confirm and pay</a>
+    </nav>
+
+    <!--**************Section************************************************* -->
+    <!-- /***************Artical Left************************************************* -->
+
+    <section>
+        <article class="article-left">
+            <h1 class="article-left__title">Confirm your book</h1>
+            <br><br>
+            <div class="your-tour">
+                <h2>Your tour</h2>
+                <br>
+                <div class="your-tour__date">
+                    <div class="your-tour__dateone">
+                        <p><b>Date</b></p>
+                        <p>June 27-30, 2020</p>
+                    </div>
+                    <button class="btn-date">
+                        <span class="material-symbols-outlined">
+                            border_color
+                        </span>
+                    </button>
+                </div>
+
+                <div class="your-tour__travel">
+                    <div class="your-tour__travelone">
+                        <p><b>Traveller</b></p>
+                        <p>1 Passenger</p>
+                    </div>
+                    <button class="btn-travel">
+                        <span class="material-symbols-outlined">
+                            border_color
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+            <br>
+            <h2>Creadit Cards</h2>
+            <div class="creadit-card">
+                <img src="payment.PNG" class="creadit-card__method" alt="">
+                <br><br>
+                <img src="card 1.png" class="creadit-card__master" alt="">
+                <img src="card 2.png" class="creadit-card__visa" alt="">
+                <br><br>
+
+                <p>Card Number</p>
+                <input class="input-number" type="text">
+                <br><br>
+                <div class="user-infor">
+                    <div class="user-infor__expiry">
+                        <p>Expiry Date</p>
+                        <input class="input-date" type="date">
+                    </div>
+                    <div class="user-infor__cvc">
+                        <p>CVC/CVV</p>
+                        <input class="input-cvc" type="password">
+                    </div>
+                </div>
+                <br>
+                <input type="checkbox">
+                <span>Save Card</span>
+                <br><br>
+                <button class="creadit-card__btn-confirm">Confirm and reserve</button>
+                <br><br><br>
+            </div>
+        </article>
+        <!-- /***************Artical Right************************************************* -->
+        <article class="article-right">
+            <h3>Switzerland Hotels and Places to Stay</h3>
+            <span class="material-symbols-outlined article-right__star">
+                star
+            </span>
+            <span>4.8</span>
+            <span class="article-right__review"> (122 reviews)</span>
+            <br>
+            <img class="article-right__imghotel" src="daniel-corneschi-N6HTCyN50p0-unsplash 1.png" alt="">
+            <p class="article-right__bedroom">1 bedroom + 1 private room</p>
+            <br>
+            <div class="in-out">
+                <div class="in-out__checkin">
+                    <p class="checkin__title">Check in</p>
+                    <p>June 27, 2020</p>
+                </div>
+                <div class="in-out__checkout">
+                    <p class="checkout__title">Check out</p>
+                    <p>June 30, 2020</p>
+                </div>
+            </div>
+            <br>
+            <p class="guest__title">Guest</p>
+            <p>2 guests</p>
+            <h3>Booked details</h3>
+            <pre>$119 + 5nights                   $833</pre>
+            <pre>Ocupancy text and fee           -$125</pre>
+            <pre>Service fee                      $103</pre>
+            <pre class="article-right__total">Total                            $833</pre>
+            <p class="article-right__report">Report this property</p>
+        </article>
+    </section>
+
+
+
+    <!--**************Article Bot************************************************* -->
+    <div class="subscribe">
+        <!-- <img src="bg.png" alt=""> -->
+        <div class="subscribe__one">
+            <h1>Get our pro offers</h1>
+            <p>Create a visual identity for your company, and an overall brand</p>
+        </div>
+        <div class="subscribe__two">
+            <input class="input-email" placeholder="Type your email here" type="text">
+            <button class="btn-subscribe">Subscribe</button>
+        </div>
+    </div>
+
+    <!--**************Footer************************************************* -->
+
+    <footer>
+        <div class="footer-trip">
+            <img src="logo.png" alt="">
+            <p>This is the team that specializes in making your interior looks cool</p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="material-symbols-outlined">
+                sunny
+            </span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="material-symbols-outlined">
+                dark_mode
+            </span>
+        </div>
+
+        <div class="footer-services">
+            <h3>Services</h3>
+            <p>Travel Booking</p>
+            <p>Flight Booking</p>
+            <p>Car Booking</p>
+            <p>Fivestar Hotel</p>
+            <p>Traveling</p>
+        </div>
+
+        <div class="footer-support">
+            <h3>Support</h3>
+            <p>Account</p>
+            <p>Legal</p>
+            <p>Contact</p>
+            <p>Terms & Condition</p>
+            <p>Privacy Policy</p>
+        </div>
+
+        <div class="footer-business">
+            <h3>Business</h3>
+            <p>Success</p>
+            <p>About Locato</p>
+            <p>Blog</p>
+            <p>Information</p>
+            <p>Travel Guide</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
