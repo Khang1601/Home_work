@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Hàm kiểm tra số nguyên tố</title>
+</head>
+
+<body>
+    <h1>[Bài tập] Hàm kiểm tra số nguyên tố</h1>
+
+    <script>
+        //2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97...
+        // Kiểm tra xem một số nguyên có phải là số nguyên tố hay không
+        function isPrime(number) {
+            // Số nguyên âm không phải là số nguyên tố
+            if (number <= 1) {
+                return false;
+            }
+
+            // Lặp qua các số từ 2 đến căn bậc hai của number để kiểm tra chia hết
+            for (let i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i === 0) {
+                    return false;
+                }
+            }
+
+            // Nếu không chia hết cho bất kỳ số nào từ 2 đến căn bậc hai của number, thì number là số nguyên tố
+            return true;
+        }
+
+        // Tìm tất cả các số nguyên tố nhỏ hơn 10000
+        for (let i = 2; i < 1000; i++) {
+            if (isPrime(i)) {
+                console.log(i);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>[Bài tập] Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+  <canvas id="rectangleCanvas" width="400" height="200" style="border:1px solid #000000;"></canvas>
+  <script>
+
+    //Viết một lớp các đối tượng hình chữ nhật lấy tên là Rectangle, mỗi hình chữ nhật đều có những đặc tính sau:
+    class Rectangle {
+      constructor(width, height) {
+        this.width = width;
+        this.height = height;
+      }
+
+      // tính diện tích
+      getArea() {  
+        return this.width * this.height;
+      }
+
+      // tính chu vi
+      getPerimeter() { 
+        return 2 * (this.width + this.height);
+      }
+
+      // vẽ lên canvas
+      drawOnCanvas() {
+        //tìm đến thẻ <canvas> thông qua id của nó:
+        const canvas = document.getElementById("rectangleCanvas");
+        //gọi hàm getContext() (nhập chuỗi “2d” vào):
+        const context = canvas.getContext("2d");
+        //thuộc tính fillStyle được dùng để gán CSS
+        context.fillStyle = "blue";
+        //thuộc tính fillRect(x,y,width,height) để vẽ hình chữ nhật với các tham số tọa độ x,y, chiều rộng, chiều cao.
+        //góc trên cùng bên trái của đối tượng canvas có tọa độ (0,0).
+        //=>>hàm fillRect() ở trên được thiết lập các tham số (0,0,150,75) có nghĩa là nằm sát phía trên bên trái và có kích thước là 150×75 pixels.
+        context.fillRect(0,0,150,75);
+      }
+    }
+
+
+    function displayInfo(rectangle) {
+      console.log("Chiều dài:", rectangle.width);
+      console.log("Chiều rộng:", rectangle.height);
+      console.log("Diện tích:", rectangle.getArea());
+      console.log("Chu vi:", rectangle.getPerimeter());
+    }
+
+    // Khai báo và khởi tạo một đối tượng kiểu Rectangle
+    const rectangle = new Rectangle(100, 50);
+
+    // Hiển thị hình chữ nhật trên màn hình web
+    rectangle.drawOnCanvas();
+
+    // Thay đổi chiều dài và chiều rộng của hình chữ nhật
+    rectangle.width = 150;
+    rectangle.height = 75;
+
+    // Hiển thị hình chữ nhật sau khi thay đổi kích thước
+    rectangle.drawOnCanvas();
+
+    // In ra màn hình diện tích và chu vi của hình chữ nhật
+    displayInfo(rectangle);
+  </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[BÀI TẬP] FUNCTION</title>
+</head>
+
+<body>
+    <h1>[BÀI TẬP] FUNCTION</h1>
+    <h3>1. Viết function in ra câu “Xin chào Rikkei Academy” </h3>
+    <h3>2. Viết function tính bình phương của một số</h3>
+    <h3>3. Viết function tính thế kỷ của một năm nhập vào từ bàn phím. Biết thế kỷ thứ
+        nhất tính từ năm 1 đến 100</h3>
+    <h3>4. Cho chuỗi dài hơn 15 ký tự, viết function cắt chuỗi, lấy ra 10 ký tự đầu tiên và
+        thêm vào dấu “…” ở cuối chuỗi</h3>
+    <h3>5. Viết function chuẩn hóa một từ - chỉ viết hoa chữ cái đầu tiên. Ví dụ: “rIkKEi”
+        sau khi chuẩn hóa thành “Rikkei”</h3>
+    <h3>6. Viết function trả ra giá trị lớn nhất trong một mảng số</h3>
+    <h3>7. Viết function kiểm tra số chẵn-lẻ, nguyên tố, hoàn hảo</h3>
+    <h3>8. Viết function trả ra trung bình cộng của một mảng số</h3>
+    <h3>9. Nhập vào một vào một số n, in ra n số nguyên tố tăng dần</h3>
+
+    <script>
+        //1. Viết function in ra câu “Xin chào Rikkei Academy”
+        function greet() {
+            console.log("Xin chào Rikkei Academy");
+        }
+        greet();
+
+
+        //2. Viết function tính bình phương của một số
+        function square(number) {
+            return number * number;
+        }
+        console.log(square(5)); // Kết quả: 25
+
+        
+        //3. Viết function tính thế kỷ của một năm nhập vào từ bàn phím. Biết thế kỷ thứ nhất tính từ năm 1 đến 100
+        function century(year) {
+            // return Math.ceil(year / 100); // Sử dụng hàm Math.ceil() để làm tròn lên
+            // return Math.floor(year / 100);
+            return Math.ceil(year / 100);
+        }
+        console.log(century(2023)); // Kết quả: 21
+
+
+        //4. Cho chuỗi dài hơn 15 ký tự, viết function cắt chuỗi, lấy ra 10 ký tự đầu tiên và thêm vào dấu “…” ở cuối chuỗi
+        function cutString(string) {
+            if (string.length > 15) {
+                return string.slice(0, 10) + "...";
+            } else {
+                return string;
+            }
+        }
+        console.log(cutString("Chuỗi dài hơn 15 ký tự")); // Kết quả: "Chuỗi dài..."
+
+
+        //5. Viết function chuẩn hóa một từ - chỉ viết hoa chữ cái đầu tiên. Ví dụ: “rIkKEi” sau khi chuẩn hóa thành “Rikkei”
+        function capitalize(word) {
+            return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+        }
+        console.log(capitalize("rIkKEi")); // Kết quả: "Rikkei"
+
+
+        //6. Viết function trả ra giá trị lớn nhất trong một mảng số
+        function findMax(array) {
+            let max = array[0];
+            for (let i = 1; i < array.length; i++) {
+                if (array[i] > max) {
+                    max = array[i];
+                }
+            }
+            return max;
+        }
+        console.log(findMax([1, 5, 3, 9, 2])); // Kết quả: 9
+
+
+        //7. Viết function kiểm tra số chẵn-lẻ, nguyên tố, hoàn hảo
+        // kiểm tra số chẵn
+        function isEven(number) {
+            return number % 2 === 0;
+        }
+        console.log(isEven(4)); // Kết quả: true
+
+        // kiểm tra số lẻ
+        function isOdd(number) {
+            return number % 2 !== 0;
+        }
+        console.log(isOdd(4)); // Kết quả: false
+
+        // kiểm tra số nguyên tố
+        function isPrime(number) {
+            if (number <= 1) {
+                return false;
+            }
+            for (let i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        console.log(isPrime(7)); // Kết quả: true
+
+        // kiểm tra số hoàn hảo
+        function isPerfect(number) {
+            let sum = 0;
+            for (let i = 1; i < number; i++) {
+                if (number % i === 0) {
+                    sum += i;
+                    //0+1=1
+                    //1+2=3
+                    //3+3=6
+                }
+            }
+            return sum === number;
+        }
+        console.log(isPerfect(6)); // Kết quả: true
+
+
+        //8. Viết function trả ra trung bình cộng của một mảng số
+        function average(array) {
+            let sum = 0;
+            for (let i = 0; i < array.length; i++) {
+                sum += array[i];
+            }
+            return sum / array.length;
+        }
+        console.log(average([1, 2, 3, 4, 5])); // Kết quả: 3
+
+        
+        //9. Nhập vào một vào một số n, in ra n số nguyên tố tăng dần
+        function printPrimeNumber(n) {
+            let count = 0;
+            let number = 2;
+            while (count < n) {
+                if (isPrime(number)) {
+                    console.log(number);
+                    count++;
+                }
+                number++;
+            }
+        }
+        printPrimeNumber(50); // Kết quả: 2, 3, 5, 7, 11
+
+
+
+    </script>
+
+</body>
+
+</html>

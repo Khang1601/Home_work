@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2: Viết một chương trình nhận một số nhập vào và chèn dấu (_) giữa 2 số chẵn. </title>
+</head>
+
+<body>
+    <h1>Bài 2: Viết một chương trình nhận một số nhập vào và chèn dấu (_) giữa 2 số chẵn. </h1>
+
+    <script>
+
+        let number = prompt("Xin hãy nhập 1 số: ");
+        // let number = "112234456";
+        console.log("Kiểu dữ liệu của số nhập vào là: ", typeof number);  //string
+
+        // chuỗi -> mảng
+        let number_array = number.split("");
+        console.log(number_array);
+
+        // tạo chuỗi trống
+        let result = "";
+
+        // dấu - giữa 2 số chẵn
+        // for( let i=0; i<number_array.length; i++){
+        //     if((number_array[i]%2===0) && (number_array[i+1]%2===0)){
+        //         result=result+number_array[i]+"-"
+        //     }else{
+        //         result=result+number_array[i]
+        //     }
+        // }
+
+        // dấu - giữa 2 số lẽ
+        for( let i=0; i<number_array.length; i++){
+            if((number_array[i]%2!==0) && (number_array[i+1]%2!==0)){
+                result=result+number_array[i]+"-"
+            }else{
+                result=result+number_array[i]
+            }
+        }
+
+        console.log(result)
+        console.log("Kiểu dữ liệu của số sau khi có dấu - vào là:", typeof result)
+
+    </script>
+</body>
+
+</html>

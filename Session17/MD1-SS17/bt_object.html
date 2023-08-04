@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[BÀI TẬP] OBJECT</title>
+</head>
+<body>
+  <h1>[BÀI TẬP] OBJECT</h1>
+
+  <script>
+//1. Tạo đối tượng person rỗng
+let person = {};
+//a. Thêm thuộc tính firstName và lastName với giá trị là “Nguyễn Văn” và “Bình”
+person.firstName = "Nguyễn Văn";
+person.lastName = "Bình";
+//b. Thay đổi giá trị lastName là “Hòa”
+person.lastName = "Hòa";
+//c. Xóa thuộc tính lastName khỏi đối tượng
+delete person.lastName;
+console.log(person)
+
+//==================================================================================================
+//2. Viết hàm checkEmpty kiểm tra đối tượng có thuộc tính không? Có thì trả về true, ngược lại trả về false
+let checkEmpty={
+name: "khang",
+mssv: "123"
+}
+console.log(checkEmpty.hasOwnProperty("name"));
+console.log(checkEmpty.hasOwnProperty("name123"));
+// lấy ra key
+console.log(Object.keys(checkEmpty));  
+// lấy ra value
+console.log(Object.values(checkEmpty));  
+
+//==================================================================================================
+// 4. Tạo đối tượng menu gồm các thuộc tính width, height và title.
+let menu={
+  title:"",
+  width:"",
+  height:"",
+  setValue: function(a,b){
+      this.width=a;
+      this.height=a;
+  },
+  getValue: function(){
+      return this.width*this.height;
+  }
+}
+console.log(menu.setValue(50,20));
+console.log(menu.getValue());
+
+//==================================================================================================
+// 5. Tạo đối tượng máy tính gồm 3 phương thức
+// a. Read(): nhận hai giá trị và lưu chúng dưới dạng thuộc tính đối tượng
+// b. Sum(): trả về tổng giá trị đã lưu
+// c. Mul(): trả về tích các giá trị đã lưu
+let calculator = {
+num1: 10,
+num2: 20,
+Read: function (num1, num2) {
+  this.num1 = num1;
+  this.num2 = num2;
+},
+Sum: function () {
+  return this.num1 + this.num2;
+},
+Mul: function () {
+  return this.num1 * this.num2;
+},
+};
+console.log(calculator.Mul());
+
+//==================================================================================================
+// 6. Xây dựng đối tượng book gồm các thuộc tính và phương thức sau:
+let book = {
+bookId: "",
+bookName: "",
+price: "",
+author: [],
+bookStatus: "",
+inputData: function (id, name, price, author, status) {
+  this.bookId = id;
+  this.bookName = name;
+  this.price = price;
+  this.author = author;
+  this.bookStatus = status;
+},
+displayData: function () {
+  console.log("Mã sách:", this.bookId);
+  console.log("Tên sách:", this.bookName);
+  console.log("Giá sách:", this.price);
+  console.log("Các tác giả:", this.author.join(", "));
+  console.log("Trạng thái sách:", this.bookStatus);
+},
+};
+console.log(book.displayData());
+//==================================================================================================
+// 7. Xây dựng các chức năng sau:
+let library = {
+books: [],
+addBook: function (bookObj) {  // a. Thêm dữ liệu sách và lưu vào mảng
+  this.books.push(bookObj);
+},
+
+displayBook: function () {  // b. Hiển thị thông tin các sách
+  this.books.forEach(function (book) {
+    book.displayData();
+    console.log("===============================");
+  });
+},
+
+updateBook: function (bookId, newBookInfo) { // c. Cho phép cập nhật thông tin sách
+  for (let i = 0; i < this.books.length; i++) {
+    if (this.books[i].bookId === bookId) {
+      this.books[i].inputData(
+        newBookInfo.bookId,
+        newBookInfo.bookName,
+        newBookInfo.price,
+        newBookInfo.author,
+        newBookInfo.bookStatus
+      );
+      return true;
+    }
+  }
+  return false;
+},
+
+deleteBook: function (bookId) { // d. Cho phép xóa sách
+  this.books = this.books.filter(function (book) {
+    return book.bookId !== bookId;
+  });
+},
+
+sortBooksByPrice: function () { // e. Cho phép sắp xếp sách theo giá sách tăng dần
+  this.books.sort(function (book1, book2) {
+    return book1.price - book2.price; //tăng dần
+    return book2.price - book1.price; //giảm dần
+
+  });
+},
+searchBookByName: function (bookName) { // f. Cho phép tìm kiếm sách theo tên sách
+  return this.books.filter(function (book) {
+    return book.bookName.toLowerCase().includes(bookName.toLowerCase());
+  });
+},
+};
+
+  </script>
+</body>
+</html>

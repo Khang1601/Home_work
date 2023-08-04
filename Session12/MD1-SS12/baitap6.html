@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Bài 6: Tạo một mảng chứa ít nhất 5 số, sau đó yêu cầu người dùng nhập một số, thực
+        hiện tìm kiếm để tìm số trong mảng, nếu số được tìm thấy, hãy cho người dùng biết
+        rằng với chỉ số của nó trong mảng, nếu không, cũng nói với họ như vậy
+    </title>
+</head>
+
+<body>
+    <h1>
+        Bài 6: Tạo một mảng chứa ít nhất 5 số, sau đó yêu cầu người dùng nhập một số, thực
+        hiện tìm kiếm để tìm số trong mảng, nếu số được tìm thấy, hãy cho người dùng biết
+        rằng với chỉ số của nó trong mảng, nếu không, cũng nói với họ như vậy
+    </h1>
+    <script>
+        const arr = [3, 4, 6, -9, 10, -88, 2];
+
+        // Nhập 1 số
+        let number = +prompt("Nhập một số:");
+
+        //phương thức indexOf() để tìm vị trí của từ trong mảng englishWords
+        // indexOf(): ktra xem phần tử có tồn tại trong mảng hay ko
+        //         +nếu có trả về: vị trí 
+        //         +nếu ko trả về: -1
+        let findIndex = arr.indexOf(number);
+
+        // Kiểm tra kết quả tìm kiếm và thông báo cho người dùng
+        if (findIndex !== -1) {
+            alert(`Số ${number} được tìm thấy trong array tại index ${findIndex}`);
+        } else {
+            alert(`Số ${number} không được tìm thấy trong array`);
+        }
+
+    </script>
+</body>
+
+</html>

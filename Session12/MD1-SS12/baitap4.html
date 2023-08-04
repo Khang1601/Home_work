@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Bài 4: Viết kịch bản yêu cầu người dùng nhập một dãy số, Các số được phân tách
+        bằng dấu phẩy, tính tổng các số và hiển thị cho người dùng
+    </title>
+</head>
+
+<body>
+    <h1>
+        Bài 4: Viết kịch bản yêu cầu người dùng nhập một dãy số, Các số được phân tách
+        bằng dấu phẩy, tính tổng các số và hiển thị cho người dùng
+    </h1>
+
+    <script>
+        // Yêu cầu người dùng nhập một dãy số
+        let userInput = prompt("Nhập một dãy số, các số được phân tách bằng dấu phẩy:");
+
+        // Tách chuỗi nhập vào thành một mảng các số
+        // --->>chuỗi thành mảng
+        let number = userInput.split(",");
+        console.log(number);
+
+        // Tính tổng các số
+        let sum = 0;
+        for (let i = 0; i < number.length; i++) {
+            sum += parseFloat(number[i]);
+        }
+
+        // Hiển thị kết quả cho người dùng
+        alert("Tổng các số là: " + sum);
+
+    </script>
+</body>
+
+</html>

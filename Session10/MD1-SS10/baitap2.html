@@ -8,7 +8,7 @@
         }
         
         .container {
-            max-width: 400px;
+            max-width: 500px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -37,12 +37,13 @@
         
         button {
             display: block;
+            width: 200px;
             margin: 0 auto;
             padding: 10px 20px;
             font-size: 16px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
+            /* background-color: #ffffff; */
+            color: rgb(0, 0, 0);
+            border: 1px black solid;
             border-radius: 4px;
             cursor: pointer;
         }
@@ -58,7 +59,7 @@
     <h1>Tính số ngày trong tháng</h1>
     
     <div class="container">
-        <label for="month">Tháng:</label>
+        <label for="month">Xin hãy nhập tháng:</label>
         <div class="form-group">
             <input type="number" id="month" min="1" max="12" required>
             <button onclick="calculate()">Tính số ngày</button>
@@ -80,21 +81,25 @@
                 case 8:
                 case 10:
                 case 12:
-                    resultMessage = "Tháng " + month + " có 31 ngày.";
+                    resultMessage = "Tháng " + month + " có 31 ngày";
                     break;
+
+                case 2:
+                    resultMessage = "Tháng " + month + " có 28 hoặc 29 ngày";
+                    break;
+
                 case 4:
                 case 6:
                 case 9:
                 case 11:
-                    resultMessage = "Tháng " + month + " có 30 ngày.";
+                    resultMessage = "Tháng " + month + " có 30 ngày";
                     break;
-                case 2:
-                    resultMessage = "Tháng " + month + " có 28 hoặc 29 ngày.";
-                    break;
+
                 default:
-                    resultMessage = "Tháng không hợp lệ.";
+                    resultMessage = "Error => Xin nhập lại tháng";
                     break;
             }
+
             // Sử dụng document.getElementById để hiển thị thông báo kết quả trong phần tử div có id "result".
             document.getElementById("result").textContent = resultMessage;
         }

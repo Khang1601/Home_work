@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>3. Tạo mảng có tên là styles có giá trị các phần tử là “Jazz”, “Blues”</h1>
+    <h2>a. Thêm phần tử “Rock-n-Roll” vào cuối mảng</h2>
+    <h2>b. Thay thế phần tử nằm chính giữa mảng bằng “Classics” nếu mảng có tổng số phần tử là lẻ</h2>
+    <h2>c. Xóa phần tử đầu tiên của mảng và hiển thị mảng</h2>
+    <h2>d. Thêm phần tử “Rap” và “Reggae” vào đầu mảng và hiển thị</h2>
+
+    <script>
+        //3. Tạo mảng có tên là styles có giá trị các phần tử là “Jazz”, “Blues”
+        let styles = ["Jazz", "Blues"]
+        console.log("Mảng: ", styles);                                      //['Jazz', 'Blues']
+
+        //a. Thêm phần tử “Rock-n-Roll” vào cuối mảng
+        styles.push("Rock-n-Roll");
+        console.log("Mảng sau khi thêm phần tử: ", styles);                 //['Jazz', 'Blues', 'Rock-n-Roll']
+
+        //b. Thay thế phần tử nằm chính giữa mảng bằng “Classics” nếu mảng có tổng số phần tử là lẻ
+        // if (styles.length % 2 !== 0) { //nếu tổng số element là: LẼ
+        //     let middleIndex = Math.floor(styles.length / 2); // hàm Math.floor() dùng để làm tròn số
+        //     styles[middleIndex] = "Classics";                // styles[1] = "Classics";
+        // }
+        styles[Math.floor((styles.length - 1) / 2)] = "Classics";
+        console.log("Mảng sau khi thêm phần tử chính giữa: ", styles);      //['Jazz', 'Classics', 'Rock-n-Roll']
+
+        //c. Xóa phần tử đầu tiên của mảng và hiển thị mảng
+        styles.shift();
+        console.log("Mảng sau khi xóa phần tử đầu tiên:", styles);          //['Classics', 'Rock-n-Roll']
+
+        //d. Thêm phần tử “Rap” và “Reggae” vào đầu mảng và hiển thị
+        styles.unshift("Rap", "Reggae");
+        console.log("Mảng sau khi thêm phần tử vào đầu:", styles);          //['Rap', 'Reggae', 'Classics', 'Rock-n-Roll']
+    </script>
+</body>
+
+</html>

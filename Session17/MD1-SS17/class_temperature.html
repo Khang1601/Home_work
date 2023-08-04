@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Xây dựng lớp mô tả Temperature</title>
+</head>
+
+<body>
+    <h1>[Bài tập] Xây dựng lớp mô tả Temperature</h1>
+
+    <script>
+        //Viết một lớp các đối tượng mô tả loại dữ liệu nhiệt độ lấy tên là Temperature. Các thông số mô tả cho nhiệt độ gồm:
+        class Temperature {
+            constructor(celsius) {
+                this.celsius = celsius;
+                //Trị số tính theo đơn vị độ C (giá trị nhỏ nhất -273 độ)
+                if (celsius < -273) {
+                    throw new Error("Temperature cannot be lower than -273°C");
+                }
+            }
+
+            //Trị số tính theo đơn vị độ C
+            getCelsius() {
+                return this.celsius;
+            }
+
+            //Có tính năng chuyển đổi từ độ C sang độ F
+            getFahrenheit() {
+                return (this.celsius * 9) / 5 + 32;
+            }
+
+            //Có tính năng chuyển đổi từ độ C sang độ Kenvin
+            getKelvin() {
+                return this.celsius + 273.15;
+            }
+        }
+
+        // Khởi tạo một đối tượng Temperature với nhiệt độ 25 độ C
+        const temperature = new Temperature(25);
+
+        // Hiển thị nhiệt độ F và độ Kenvin tương ứng
+        console.log("Nhiệt độ F:", temperature.getFahrenheit());
+        console.log("Độ Kenvin:", temperature.getKelvin());
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Từ điển đơn giản</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor:crosshair;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        p.result {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>[Bài tập] Từ điển</h1>
+    <div class="container">
+        <label for="wordInput">Nhập từ cần tìm kiếm:</label>
+        <input type="text" id="wordInput" placeholder="Nhập từ tiếng Anh">
+        <button onclick="lookupWord()">Tra cứu</button>
+        <p class="result" id="resultText"></p>
+    </div>
+
+    <script>
+        // Tạo mảng lưu trữ các từ tiếng Anh
+        var englishWords = ["apple", "banana", "cat", "dog", "elephant"];
+
+        // Tạo mảng lưu trữ các từ tiếng Việt tương ứng
+        var vietnameseWords = ["quả táo", "quả chuối", "con mèo", "con chó", "con voi"];
+
+        // Hàm tra cứu từ
+        function lookupWord() {
+            //lấy từ tại label với id="wordInput" -->> cho từ xuống lowercase
+            var input = document.getElementById("wordInput").value.toLowerCase();
+
+            //phương thức indexOf() để tìm vị trí của từ trong mảng englishWords
+            // indexOf(): ktra xem phần tử có tồn tại trong mảng hay ko
+            //         +nếu có trả về: vị trí 
+            //         +nếu ko trả về: -1
+            var index = englishWords.indexOf(input);
+
+
+            var resultText = document.getElementById("resultText");
+
+            if (index !== -1) { //nếu có trả về: vị trí
+                var vietnameseWord = vietnameseWords[index];
+                resultText.textContent = vietnameseWord;
+            } else { //mếu ko có trả về: -1
+                resultText.textContent = "Không tìm thấy từ trong từ điển";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

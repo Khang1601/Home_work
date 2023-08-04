@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Chuyển đổi giữa feet và meters</title>
+</head>
+
+<body>
+    <h1>[Bài tập] Chuyển đổi giữa feet và meters</h1>
+    <script>
+        // Chuyển đổi từ feet sang meters
+        function feetToMeter(feet) {
+            // Sử dụng công thức chuyển đổi: meter = 0.305 * feet
+            return 0.305 * feet;
+        }
+
+        // Chuyển đổi từ meters sang feet
+        function meterTofeet(meter) {
+            // Sử dụng công thức chuyển đổi: feet = 3.279 * meter
+            return 3.279 * meter;
+        }
+
+        // Kiểm tra tính chính xác của các hàm bằng cách sử dụng giá trị trong bảng
+        const feetValues = [1, 2, 9, 10];
+        const meterValues = [0.305, 0.610, 2.745, 3.048];
+
+        for (let i = 0; i < feetValues.length; i++) {
+            const feet = feetValues[i];
+            const meter = meterValues[i];
+
+            console.log(`${feet} feet = ${feetToMeter(feet)} meters`); // Kiểm tra chuyển từ feet sang meters
+            console.log(`${meter} meters = ${meterTofeet(meter)} feet`); // Kiểm tra chuyển từ meters sang feet
+        }
+
+    </script>
+</body>
+
+</html>

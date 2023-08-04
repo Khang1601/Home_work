@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5: Viết script yêu cầu người dùng nhập một dãy số, các số được phân tách bằng
+        dấu phẩy, tìm số nhỏ nhất và đăng xuất cho người dùng
+    </title>
+</head>
+
+<body>
+    <h1>
+        Bài 5: Viết script yêu cầu người dùng nhập một dãy số, các số được phân tách bằng
+        dấu phẩy, tìm số nhỏ nhất và đăng xuất cho người dùng
+    </h1>
+
+    <script>
+        // Yêu cầu người dùng nhập một dãy số
+        let userInput = prompt("Nhập một dãy số, các số được phân tách bằng dấu phẩy:");
+
+        // Tách chuỗi nhập vào thành một mảng các số
+        // --->>chuỗi thành mảng
+        let number = userInput.split(",");
+        console.log(number);
+
+        let min = Math.min(...number);
+        let max = Math.max(...number);
+
+        console.log("Giá trị min: ", min);
+        console.log("Giá trị max: ", max);
+
+        alert("Giá trị min: "+ min);
+        alert("Giá trị max: "+ max);
+
+    </script>
+</body>
+
+</html>

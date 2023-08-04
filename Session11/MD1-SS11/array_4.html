@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>4. Khai báo mảng một chiều</h1>
+    <h2>a. Cho phép người dùng nhập các giá trị của mảng bằng hàm prompt và
+        lưu trữ giá trị trong mảng cho đến khi người dùng nhập một giá trị
+        không phải là số, một chuỗi trống hoặc nhấn “Cancel”</h2>
+    <h2>b. Tính tổng các giá trị của mảng, in ra phần tử có giá trị max - min (không
+        và có sử dụng hàm Math.max và Math.min)</h2>
+
+    <script>
+        // Khai báo mảng
+        let arr = [];
+
+        // a. Cho phép người dùng nhập các giá trị của mảng bằng hàm prompt và lưu trữ giá trị trong mảng cho đến khi người dùng nhập một giá trị không phải là số, một chuỗi trống hoặc nhấn “Cancel”
+        let number = prompt("Nhập giá trị của mảng (không phải là số, một chuỗi trống hoặc nhấn “Cancel”");
+        // giá trị ko phải số 
+        // giá trị ko phải chuỗi trống
+        // nhấn cancel để thoát
+
+        while (number !== null && number !== "" && !isNaN(parseFloat(number))) {
+            arr.push(parseFloat(number));
+            number = prompt("Nhập giá trị của mảng (nhập một giá trị không phải số hoặc chuỗi trống hoặc nhấn Cancel để kết thúc):");
+        }
+
+        // Tính tổng các giá trị của mảng 
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+
+        // Tìm giá trị max và min sử dụng hàm Math.max và Math.min
+        let max = Math.max(...arr);
+        let min = Math.min(...arr);
+
+        // Tìm giá trị max và min ko sử dụng hàm
+        let max_noUse = arr[0];
+        let min_noUse = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+            //tìm max
+            if (arr[i] > max_noUse) {
+                max_noUse = arr[i];
+            }
+            //tìm min
+            if (arr[i] < min_noUse) {
+                min_noUse = arr[i];
+            }
+        }
+
+        // In ra tổng, giá trị max và min
+        console.log("Tổng các giá trị của mảng:", sum);
+        console.log("Phần tử có giá trị max - min sử dụng hàm: ", max, " và ", min);
+        console.log("Phần tử có giá trị max - min ko sử dụng hàm: ", max_noUse, " và ", min_noUse);
+
+
+    </script>
+</body>
+
+</html>

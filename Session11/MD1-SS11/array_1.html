@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>1. Khai báo mảng một chiều có tên arrayInt</h1>
+    <h2>a. Nhập 5 giá trị số nguyên cho mảng từ bàn phím</h2>
+    <h2>b. Hiển thị giá trị các phần tử của mảng</h2>
+    <h2>c. In các phần tử có giá trị chẵn và tính tổng</h2>
+    <h2>d. In các phần tử có chỉ số lẻ và tính tổng</h2>
+    <h2>e. In giá trị các phần tử trong mảng là số nguyên tố</h2>
+    <h2>f. In các phần tử có giá trị là max hoặc min</h2>
+    <h2>g. Sắp xếp mảng giảm dần và in giá trị các phần tử mảng sau khi sắp xếp(không và có sử dụng hàm sort)</h2>
+    <h2>h. Nhập vào một số nguyên và thống kê có bao nhiêu phần tử có giá trị như vậy</h2>
+
+    <!-- 
+        B1: tạo 1 mảng nếu nó là số nguyên thì push nó vào mảng
+        B2: kiểm tra số vừa nhập có phải là số nguyên hay ko
+     -->
+    <script>
+        //1. Khai báo mảng một chiều có tên arrayInt
+        let arrayInt = [];
+
+        //a. Nhập 5 giá trị số nguyên cho mảng từ bàn phím
+        // for (let i = 1; i <= 3; i++) {
+        //     //typeof value = number
+        //     let value = +prompt(`Nhập số nguyên thứ ${i}: `);
+        //     arrayInt.push(value);
+        // }
+        while(arrayInt.length<3){
+            let value = +prompt("Nhập số nguyên: ");
+            if(Number.isInteger(value)){
+                arrayInt.push(value)
+            }
+            // if(value==null){
+            //     break;
+            // }
+        }
+
+
+        //b. Hiển thị giá trị các phần tử của mảng
+        console.log("Mảng: ", arrayInt);
+        console.log("Các phần tử trong mảng: " + arrayInt.join(","));
+
+        //c. In các phần tử có giá trị chẵn và tính tổng
+        let evenElement = [];
+        let evenSum = 0;
+        for (let i = 0; i < arrayInt.length; i++) {
+            if (arrayInt[i] % 2 === 0) {
+                evenElement.push(arrayInt[i]);
+                evenSum = evenSum + arrayInt[i];
+            }
+        }
+        console.log("Các phần tử giá trị chẵn: " + evenElement.join(","))
+        console.log("Tổng các phần tử có giá trị chẵn: " + evenSum);
+
+        //d. In các phần tử có chỉ số lẻ và tính tổng
+        let oddElement = [];
+        let oddSum = 0;
+        for (let i = 0; i < arrayInt.length; i++) {
+            if (arrayInt[i] % 2 !== 0) {
+                oddElement.push(arrayInt[i]);
+                oddSum = oddSum + arrayInt[i];
+            }
+        }
+        console.log("Các phần tử giá trị lẽ: " + oddElement.join(","))
+        console.log("Tổng các phần tử có giá trị lẽ: " + oddSum);
+
+        //e. In giá trị các phần tử trong mảng là số nguyên tố
+        //Bước 1: Định nghĩa hàm `isPrimeNumber(num)` để kiểm tra số `num` có phải là số nguyên tố hay không.
+        function isPrime(number) {
+            //Bước 2: Kiểm tra nếu `num` nhỏ hơn hoặc bằng 1 thì trả về giá trị là `false` vì số 1 và số âm không phải là số nguyên tố.
+            if (number <= 1) {
+                return false;
+            }
+            //Bước 3: Sử dụng vòng lặp `for` để duyệt từ 2 đến căn bậc hai của `num`.
+            for (let i = 2; i <= Math.sqrt(number); i++) {
+                //Bước 4: Trong mỗi vòng lặp, kiểm tra nếu `num` chia hết cho số `i` thì trả về giá trị là `false` vì `num` không phải là số nguyên tố.
+                if (number % i === 0) {
+                    return false;
+                }
+            }
+            //Bước 5: Sau khi kết thúc vòng lặp, trả về giá trị là `true` vì `num` là số nguyên tố.
+            return true;
+        }
+
+        let primeElement = [];
+        for (let i = 0; i < arrayInt.length; i++) {
+            //Bước 6: Sử dụng hàm `isPrime()` để kiểm tra các số trong các trường hợp cụ thể.
+            if (isPrime(arrayInt[i])) {
+                primeElement.push(arrayInt[i]);
+            }
+        }
+        console.log("Các phần tử là số nguyên tố: " + primeElement.join(", "));
+
+        //f. In các phần tử có giá trị là max hoặc min
+        let max = Math.max(...arrayInt);
+        let min = Math.min(...arrayInt);
+        let maxMinElement = [];
+        for (let i = 0; i < arrayInt.length; i++) {
+            if (arrayInt[i] === max || arrayInt[i] === min) {
+                maxMinElement.push(arrayInt[i]);
+            }
+        }
+        console.log("Các phần tử có giá trị là max hoặc min: " + maxMinElement.join(", "));
+
+
+        //g. Sắp xếp mảng giảm dần và in giá trị các phần tử mảng sau khi sắp xếp(không và có sử dụng hàm sort)
+        // for (let i = 0; i < arrayInt.length - 1; i++) {
+        //     for (let j = i + 1; j < arrayInt.length; j++) {
+        //         if (arrayInt[i] < arrayInt[j]) {
+        //             let temp = arrayInt[i];
+        //             arrayInt[i] = arrayInt[j];
+        //             arrayInt[j] = temp;
+        //         }
+        //     }
+        // }
+        // console.log("Mảng sau khi sắp xếp giảm dần: " + arrayInt.join(", "));
+
+
+        // arrayInt = [1,2,3,4] ->length =4
+        // i=0<3 -> j=1<4 2<4 3<4
+
+        for (let i = 0; i < arrayInt.length - 1; i++) {
+            for (let j = i + 1; j < arrayInt.length; j++) {
+                if (arrayInt[i] > arrayInt[j]) {
+                    let temp = arrayInt[i];
+                    arrayInt[i] = arrayInt[j];
+                    arrayInt[j] = temp;
+                }
+            }
+        }
+        console.log("Mảng sau khi sắp xếp tăng dần: " + arrayInt.join(", "));
+
+        // arrayInt.sort(function(a, b){return a - b});
+        // console.log("Giá trị mảng từ bé đến lớn:",arrayInt);
+
+        // arrayInt.sort(function(a, b){return b - a});
+        // console.log("Giá trị mảng từ lớn đến bé: ",arrayInt);
+ 
+        //h. Nhập vào một số nguyên và thống kê có bao nhiêu phần tử có giá trị như vậy
+        let number = parseInt(prompt("=>>Nhập vào 1 số để kiểm tra: "));
+        let count = 0;
+        for (let i = 0; i < arrayInt.length; i++) {
+            if (arrayInt[i] === number) {
+                count++;
+            }
+        }
+        console.log(`Số lần xuất hiện của ${number} trong mảng: ${count}`);
+    </script>
+</body>
+
+</html>

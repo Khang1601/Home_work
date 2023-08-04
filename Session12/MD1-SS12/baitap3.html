@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3: Viết một chương trình JavaScript chấp nhận một chuỗi làm đầu vào và hoán
+        đổi trường hợp của mỗi ký tự. Ví dụ: nếu bạn nhập 'The Quick Brown Fox', đầu ra phải
+        là 'tHE qUICK bROWN fOX'.
+    </title>
+</head>
+
+<body>
+    <h1>Bài 3: Viết một chương trình JavaScript chấp nhận một chuỗi làm đầu vào và hoán
+        đổi trường hợp của mỗi ký tự. Ví dụ: nếu bạn nhập 'The Quick Brown Fox', đầu ra phải
+        là 'tHE qUICK bROWN fOX'.
+    </h1>
+
+    <script>
+        let inputString = prompt("Nhập vào một chuỗi: ");
+
+        // chuỗi -> mảng
+        let inputString_array = inputString.toString();
+
+        // tạo chuỗi rỗng
+        let result = '';
+
+        for (let i = 0; i < inputString_array.length; i++) {
+            let currentChar = inputString_array.charAt(i);
+            //nếu kí tự hiện tại là lowercase
+            if (currentChar === currentChar.toLowerCase()) {
+                result += currentChar.toUpperCase();
+            } else {//nếu kí tự hiện tại là uppercase
+                result += currentChar.toLowerCase();
+            }
+        }
+        console.log(result);
+    </script>
+</body>
+
+</html>

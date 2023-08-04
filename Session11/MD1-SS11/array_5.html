@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>5. Khai báo và khởi tạo mảng 1 chiều số nguyên. Nhập vào 2 số nguyên a, b.
+        Khởi tạo mảng gồm các phần tử của mảng số nguyên mà giá trị nằm giữa a và
+        b</h1>
+
+    <script>
+        // Khai báo và khởi tạo mảng 1 chiều số nguyên
+        let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        // Nhập vào 2 số nguyên a, b
+        let a = parseInt(prompt("Nhập vào số nguyên a: "));
+        let b = parseInt(prompt("Nhập vào số nguyên b: "));
+
+        //Khởi tạo mảng gồm các phần tử của mảng số nguyên mà giá trị nằm giữa a và b
+        let result = [];
+        if (a < b) {    // nếu số a < số b -->> in ra các số nằm giữa a và b
+            for (let i = 0; i < array.length; i++) {  
+                if (array[i] > a && array[i] < b) {  //nếu giá trị>a và <b thì in ra
+                    result.push(array[i]);
+                }
+            }
+        } else {        // nếu số a >= số b  -->> in ra các số nằm giữa b và a
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] < a && array[i] > b) { //nếu giá trị>b và <a thì in ra
+                    result.push(array[i]);
+                }
+            }
+        }
+
+        // Hiển thị mảng gồm các phần tử nằm giữa a và b
+        console.log("Mảng gồm các phần tử nằm giữa a và b:", result);
+    </script>
+</body>
+
+</html>
